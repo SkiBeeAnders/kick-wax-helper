@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kick Wax Helper – Classic Grip</title>
+  <style>
+    :root { --pad: 14px; --radius: 14px; }
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      margin: 0;
+      background: #f6f7f9;
+      color: #111;
+    }
+    header {
+      padding: 20px var(--pad);
+      background: white;
+      border-bottom: 1px solid #e6e8ee;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    h1 { margin: 0; font-size: 18px; }
+    main { max-width: 980px; margin: 0 auto; padding: 18px var(--pad) 40px; }
+
+    .card {
+      background: white;
+      border: 1px solid #e6e8ee;
+      border-radius: var(--radius);
+      padding: var(--pad);
+      box-shadow: 0 1px 2px rgba(0,0,0,.03);
+    }
+    .grid { display: grid; gap: 14px; }
+    @media (min-width: 860px) {
+      .grid.two { grid-template-columns: 1fr 1.2fr; }
+    }
+    label { display: block; font-size: 13px; margin-bottom: 6px; color: #333; }
+    input[type="number"] {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid #d9dde7;
+      font-size: 16px;
+    }
+    .row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+    button {
+      cursor: pointer;
+      border: 1px solid #d9dde7;
+      background: #fff;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+    button.primary { background: #111; color: #fff; border-color: #111; }
+    button.active { border-color: #111; box-shadow: inset 0 0 0 1px #111; }
+
+    .chips { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+    .chip {
+      font-size: 12px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid #e6e8ee;
+      background: #fafbfc;
+    }
+    .muted { color: #666; font-size: 13px; line-height: 1.35; }
+    .warning {
+      border: 1px solid #f0d58a;
+      background: #fff7da;
+      border-radius: var(--radius);
+      padding: 10px 12px;
+    }
+    .result {
+      border: 1px solid #e6e8ee;
+      border-radius: var(--radius);
+      padding: 12px;
+      background: #fff;
+    }
+    .result h3 { margin: 0 0 6px 0; font-size: 16px; }
+    .brand { font-weight: 700; }
+    .small { font-size: 12px; color: #666; }
+    .divider { height: 1px; background: #e6e8ee; margin: 14px 0; }
+    details { margin-top: 8px; }
+    details summary { cursor: pointer; font-weight: 600; }
+    ol { margin: 8px 0 0 18px; }
+
+    .resgrid { display: grid; gap: 12px; }
+    .resrow { display: grid; grid-template-columns: 92px 1fr; gap: 12px; align-items: start; }
+    .thumb {
+      width: 92px; height: 92px;
+      border: 1px solid #e6e8ee;
+      border-radius: 12px;
+      background: #fafbfc;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    #debug {
+      margin-top: 8px;
+      font-size: 11px;
+      color: #888;
+    }
+
+    /* Right column: race + training stacked */
+    .right-column {
+      display: grid;
+      gap: 14px;
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <h1>Kick Wax Helper – Classic Grip</h1>
+</header>
+
+<main class="grid two">
+  <!-- LEFT: Input -->
+  <section class="card">
+    <h2 style="margin:0 0 10px 0; font-size:16px;">1) Conditions</h2>
+
+    <label for="temp">Temperature (°C)</label>
+    <input id="temp" type="number" step="0.5" value="-3" />
+
+    <div class="row" aria-label="Quick temperature buttons">
+      <button type="button" data-temp="-15">-15</button>
+      <button type="button" data-temp="-10">-10</button>
+      <button type="button" data-temp="-5">-5</button>
+      <button type="button" data-temp="0">0</button>
+      <button type="button" data-temp="2">+2</button>
+    </div>
+
+    <div class="divider"></div>
+
+    <label>Snow type</label>
+    <div class="row" role="group" aria-label="Snow type">
+      <button type="button" class="active" data-cond="new">New Snow</button>
+      <button type="button" data-cond="old">Old Snow / Transformed</button>
+      <button type="button" data-cond="wet">Wet Snow</button>
+    </div>
+
+    <p class="muted" style="margin-top:10px;">
+      New Snow = fresh, fine-grained. Old Snow / Transformed = old, coarse, hard track, manmade. Wet Snow = moist, wet, icy or refrozen.
+    </p>
+
+    <div class="divider"></div>
+
+    <div class="row">
+      <button id="btn-run" class="primary" type="button">Get recommendation</button>
+    </div>
+
+    <div id="debug"></div>
+  </section>
+
+  <!-- RIGHT: Race + Training/Touring -->
+  <div class="right-column">
+    <!-- Race -->
+    <section class="card">
+      <h2 style="margin:0 0 10px 0; font-size:16px;">2) Race Recommendation</h2>
+
+      <div id="summary-race" class="muted">
+        Loading wax data…
+      </div>
+
+      <div id="warnings" style="margin-top:12px; display:none;"></div>
+
+      <div id="results-race" class="resgrid" style="margin-top:12px;"></div>
+
+      <details id="applyHelp" style="display:none;">
+        <summary>How to apply (quick)</summary>
+        <div class="divider"></div>
+        <div id="applyText" class="muted"></div>
+      </details>
+    </section>
+
+    <!-- Training / Touring -->
+    <section class="card">
+      <h2 style="margin:0 0 10px 0; font-size:16px;">3) Training / Touring</h2>
+
+      <div id="summary-train" class="muted">
+        Loading wax data…
+      </div>
+
+      <div id="results-train" class="resgrid" style="margin-top:12px;"></div>
+    </section>
+  </div>
+</main>
+
+<script>
+// ----- Labels -----
+const CONDITION_LABELS = {
+  new: "New Snow",
+  old: "Old Snow / Transformed",
+  wet: "Wet Snow"
+};
+
+// ----- Global wax data -----
+let waxData = null; // { version, scope, products: [...] }
+let selectedCondition = "new";
+
+// ----- DOM references -----
+const tempEl        = document.getElementById("temp");
+const btnRun        = document.getElementById("btn-run");
+const debugEl       = document.getElementById("debug");
+
+const summaryRaceEl = document.getElementById("summary-race");
+const summaryTrainEl= document.getElementById("summary-train");
+const warningsEl    = document.getElementById("warnings");
+
+const resultsRaceEl = document.getElementById("results-race");
+const resultsTrainEl= document.getElementById("results-train");
+const applyHelpEl   = document.getElementById("applyHelp");
+const applyTextEl   = document.getElementById("applyText");
+
+// ----- Fetch wax_data.json -----
+async function loadWaxData() {
+  try {
+    const res = await fetch("wax_data.json");
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    const data = await res.json();
+    waxData = data;
+    console.log("Loaded wax_data.json with", waxData.products?.length, "products");
+    summaryRaceEl.textContent = "Choose conditions and press “Get recommendation”.";
+    summaryTrainEl.textContent = "Choose conditions and press “Get recommendation”.";
+    renderRecommendations();
+  } catch (err) {
+    console.error("Error loading wax_data.json:", err);
+    summaryRaceEl.textContent  = "Could not load wax data.";
+    summaryTrainEl.textContent = "Could not load wax data.";
+  }
+}
+
+// ----- Core chooser logic -----
+// opts: { marginC, maxResults, segment }
+function chooseGripWax(temperatureC, conditionKey, data, opts = {}) {
+  const marginC   = opts.marginC ?? 1;
+  const maxResults= opts.maxResults ?? 3;
+  const segment   = opts.segment ? String(opts.segment).toLowerCase() : null;
+
+  const products = data.products ?? [];
+
+  const preferType = conditionKey === "wet"
+    ? ["klister", "hardwax"]
+    : ["hardwax", "klister"];
+
+  const candidates = products.filter(p => {
+    if (p.active === false) return false;
+
+    // Segment filter: p.segment expected "race" or "training"
+    if (segment) {
+      const segVal =
+        (p.segment ??
+         p["Race/Training"] ?? // just in case
+         p.race_training ??
+         ""
+        ).toString().toLowerCase();
+
+      // If segment is set on product and doesn't match, skip
+      if (segVal && segVal !== segment) return false;
+    }
+
+    const ranges = p.temp_ranges || {};
+    const tr = ranges[conditionKey];
+    if (!tr || tr.min === undefined || tr.max === undefined) return false;
+
+    const min = Number(tr.min);
+    const max = Number(tr.max);
+    if (!Number.isFinite(min) || !Number.isFinite(max)) return false;
+
+    return (
+      temperatureC >= (min - marginC) &&
+      temperatureC <= (max + marginC)
+    );
+  });
+
+  function typePriorityScore(p) {
+    const idx = preferType.indexOf(p.type);
+    return idx === -1 ? 0 : (preferType.length - idx) * 10;
+  }
+
+  function tempFitScore(p) {
+    const tr = p.temp_ranges[conditionKey];
+    const min = Number(tr.min);
+    const max = Number(tr.max);
+    const center = (min + max) / 2;
+    const span = Math.max(0.1, max - min);
+    const dist = Math.abs(temperatureC - center);
+    return 10 / (1 + dist) + 2 / span;
+  }
+
+  const ranked = candidates.map(p => {
+    const score =
+      (p.priority ?? 50) +
+      typePriorityScore(p) +
+      tempFitScore(p);
+    return { ...p, _score: score };
+  }).sort((a, b) => b._score - a._score)
+    .slice(0, maxResults);
+
+  const warnings = [];
+  const nearZero = temperatureC >= -1 && temperatureC <= 1;
+  if (nearZero && (conditionKey === "old" || conditionKey === "wet")) {
+    warnings.push(
+      "Near 0°C: icing risk. Try slightly colder wax, or a thin klister base if you get icing/slipping."
+    );
+  }
+
+  return { results: ranked, warnings, candidateCount: candidates.length };
+}
+
+// ----- UI wiring -----
+function setCondition(cond) {
+  selectedCondition = cond;
+  document.querySelectorAll("[data-cond]").forEach(btn =>
+    btn.classList.remove("active")
+  );
+  document.querySelector(`[data-cond="${cond}"]`).classList.add("active");
+}
+
+document.querySelectorAll("[data-temp]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    tempEl.value = btn.getAttribute("data-temp");
+  });
+});
+
+document.querySelectorAll("[data-cond]").forEach(btn => {
+  btn.addEventListener("click", () => setCondition(btn.getAttribute("data-cond")));
+});
+
+// Render race + training
+function renderRecommendations() {
+  if (!waxData || !waxData.products) {
+    summaryRaceEl.textContent  = "Loading wax data…";
+    summaryTrainEl.textContent = "Loading wax data…";
+    return;
+  }
+
+  const t = Number(tempEl.value);
+  if (!Number.isFinite(t)) return;
+
+  const raceOut = chooseGripWax(t, selectedCondition, waxData, {
+    marginC: 1,
+    maxResults: 3,
+    segment: "race"
+  });
+
+  const trainOut = chooseGripWax(t, selectedCondition, waxData, {
+    marginC: 1,
+    maxResults: 3,
+    segment: "training"
+  });
+
+  debugEl.textContent =
+    `Temp ${t}°C, ${CONDITION_LABELS[selectedCondition]} – ` +
+    `${waxData.products.length} products total, ` +
+    `${raceOut.candidateCount} race candidates, ` +
+    `${trainOut.candidateCount} training candidates.`;
+
+  summaryRaceEl.textContent  =
+    `At ${t}°C, ${CONDITION_LABELS[selectedCondition]} (Race):`;
+  summaryTrainEl.textContent =
+    `At ${t}°C, ${CONDITION_LABELS[selectedCondition]} (Training/Touring):`;
+
+  // Warnings (same for race+training)
+  warningsEl.innerHTML = "";
+  const allWarnings = [...raceOut.warnings, ...trainOut.warnings];
+  const uniqueWarnings = [...new Set(allWarnings)];
+  if (uniqueWarnings.length) {
+    warningsEl.style.display = "grid";
+    uniqueWarnings.forEach(w => {
+      const div = document.createElement("div");
+      div.className = "warning";
+      div.textContent = w;
+      warningsEl.appendChild(div);
+    });
+  } else {
+    warningsEl.style.display = "none";
+  }
+
+  // Render helper for a result list
+  function renderList(container, results, emptyText) {
+    container.innerHTML = "";
+    if (!results.length) {
+      const div = document.createElement("div");
+      div.className = "warning";
+      div.textContent = emptyText;
+      container.appendChild(div);
+      return;
+    }
+
+    results.forEach((r, idx) => {
+      const wrap = document.createElement("div");
+      wrap.className = "result";
+
+      const row = document.createElement("div");
+      row.className = "resrow";
+
+      const thumb = document.createElement("div");
+      thumb.className = "thumb";
+
+      if (r.imageFile) {
+        const img = document.createElement("img");
+        img.alt = `${r.brand} ${r.code || ""} ${r.product}`.trim();
+        img.src = `images/${r.imageFile}`;
+        img.onerror = () => {
+          thumb.innerHTML = '<span class="small">No image</span>';
+        };
+        thumb.appendChild(img);
+      } else {
+        thumb.innerHTML = '<span class="small">No image</span>';
+      }
+
+      const content = document.createElement("div");
+      const title = document.createElement("h3");
+      const codePart = r.code ? ` ${r.code}` : "";
+      title.innerHTML =
+        `${idx === 0 ? "✅ " : ""}<span class="brand">${r.brand}</span>${codePart} ${r.product}`;
+      content.appendChild(title);
+
+      const chips = document.createElement("div");
+      chips.className = "chips";
+      const tr = r.temp_ranges[selectedCondition];
+      const min = tr ? Number(tr.min) : null;
+      const max = tr ? Number(tr.max) : null;
+      const segmentLabel = (r.segment || "").toLowerCase() === "race"
+        ? "Race"
+        : ((r.segment || "").toLowerCase() === "training" ? "Training" : "");
+      chips.innerHTML = `
+        <span class="chip">${r.type}</span>
+        ${tr && Number.isFinite(min) && Number.isFinite(max)
+          ? `<span class="chip">${min}…${max}°C</span>`
+          : ""}
+        <span class="chip">${CONDITION_LABELS[selectedCondition]}</span>
+        ${segmentLabel ? `<span class="chip">${segmentLabel}</span>` : ""}
+      `;
+      content.appendChild(chips);
+
+      const note = document.createElement("div");
+      note.className = "muted";
+      note.style.marginTop = "8px";
+      note.textContent = (r.notes || []).join(" • ");
+      content.appendChild(note);
+
+      const scoreEl = document.createElement("div");
+      scoreEl.className = "small";
+      scoreEl.style.marginTop = "8px";
+      scoreEl.textContent = `Score: ${r._score.toFixed(1)}`;
+      content.appendChild(scoreEl);
+
+      row.appendChild(thumb);
+      row.appendChild(content);
+      wrap.appendChild(row);
+      container.appendChild(wrap);
+    });
+  }
+
+  renderList(
+    resultsRaceEl,
+    raceOut.results,
+    "No race waxes matched these conditions. Try a different snow type or temperature."
+  );
+
+  renderList(
+    resultsTrainEl,
+    trainOut.results,
+    "No training/touring waxes matched these conditions. Try a different snow type or temperature."
+  );
+
+  // Application help based on top result type (prefer race if exists, else training)
+  const topList = raceOut.results.length ? raceOut.results : trainOut.results;
+  if (!topList.length) {
+    applyHelpEl.style.display = "none";
+    return;
+  }
+
+  const topType = topList[0].type;
+  applyHelpEl.style.display = "block";
+
+  if (topType === "hardwax") {
+    applyTextEl.innerHTML = `
+      <strong>Hardwax (kick wax):</strong>
+      <ol>
+        <li>Clean and dry the kick zone.</li>
+        <li>Use thin layers (3–6), cork between each.</li>
+        <li>For Old Snow / Transformed: start slightly colder/harder wax.</li>
+        <li>If slipping → go warmer/softer. If icing → go colder/harder or klister base.</li>
+      </ol>
+    `;
+  } else {
+    applyTextEl.innerHTML = `
+      <strong>Klister:</strong>
+      <ol>
+        <li>Optional: thin base klister/binder for durability.</li>
+        <li>Apply a thin "fishbone" of klister and smooth.</li>
+        <li>Less is more: add more only if needed.</li>
+        <li>If it balls/gets dirty: reduce or cover with a thin hardwax layer.</li>
+      </ol>
+    `;
+  }
+}
+
+// Button click
+btnRun.addEventListener("click", renderRecommendations);
+
+// Load data at startup
+loadWaxData();
+</script>
+</body>
+</html>

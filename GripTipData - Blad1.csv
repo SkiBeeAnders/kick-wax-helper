@@ -1,0 +1,22 @@
+﻿brand,line,Race/Training,code,product_name,type,temp_new_min,temp_new_max,temp_old_min,temp_old_max,temp_wet_min,temp_wet_max,notes,image_file,priority,active
+Swix,V,Training,V05,Polar Grip Wax,hardwax,−25,−12,−30,−15,,,Very cold extreme,swix-v05.webp,65,yes
+Swix,V,Training,V20,Green Grip Wax,hardwax,−15,−8,−18,−10,,,Cold snow,swix-v20.webp,70,yes
+Swix,V,Training,V30,Blue Grip Wax,hardwax,−10,−2,−15,−5,,,Cold to moderate,swix-v30.webp,72,yes
+Swix,V,Training,V40,Blue Extra Grip Wax,hardwax,−7,−1,−10,−3,,,Most popular classic,swix-v40.webp,74,yes
+Swix,V,Training,V45,Violet Special Wax,hardwax,−3,0,−6,−2,,,Slightly warmer,swix-v45.webp,73,yes
+Swix,V,Training,V50,Violet Wax,hardwax,0,0,−1,0,,,Zero condition,swix-v50.webp,70,yes
+Swix,V,Training,V55,Red Special Wax,hardwax,0,1,−2,1,,,Near zero,swix-v55.webp,70,yes
+Swix,V,Training,V60,Red/Silver Wax,hardwax,0,3,−1,2,,,Warm snow,swix-v60.webp,68,yes
+Swix,VP,Race,VP30,Pro Blue,hardwax,−16,−8,−20,−10,,,Pro cold,swix_vp30.png,80,yes
+Swix,VP,Race,VP40,Pro Light Blue,hardwax,−10,−4,−14,−6,,,Pro,swix_vp40.png,80,yes
+Swix,VP,Race,VP45,Pro Violet,hardwax,−5,−1,−10,−3,,,Pro,swix_vp45.png,80,yes
+Swix,VP,Race,VP50,Pro Light Violet,hardwax,−3,0,−5,1,,,Pro,swix_vp50.png,78,yes
+Swix,VP,Race,VP55,Pro Violet,hardwax,−2,1,−3,2,,,Pro,swix_vp55.png,78,yes
+Swix,VP,Race,VP60,Pro Violet/Red,hardwax,−1,2,−2,3,,,Pro,swix_vp60.png,76,yes
+Swix,VP,Race,VP65,Pro Black/Red,hardwax,0,2,−1,3,,,Pro,swix_vp65.png,76,yes
+Swix,VP,Race,VP70,Pro Yellow,hardwax,0,3,0,4,,,Pro warm,swix_vp70.png,75,yes
+Skigo,XC,Training,GRIP VIOLET,XC Kickwax Violet,hardwax,−9,−1,−12,−3,,,All types,skigo_xc_violet.png,70,yes
+Skigo,XC,Training,GRIP BLUE,XC Kickwax Blue,hardwax,−10,−3,−12,−5,,,Cold conditions,skigo_xc_blue.png,70,yes
+Skigo,FFR,Race,FFR Racing Violet,FFR Racing Grip Violet,hardwax,−12,−1,−15,−3,,,Race oriented,skigo_ffr_violet.png,78,yes
+Skigo,FFR,Race,FFR Racing Blue,FFR Racing Grip Blue,hardwax,−10,−3,−15,−5,,,Race oriented,skigo_ffr_blue.png,78,yes
+Skigo,FFR,Race,FFR Racing Yellow,FFR Racing Grip Yellow,hardwax,−1,5,−3,3,,,Warm/wet bias,skigo_ffr_yellow.png,76,yes

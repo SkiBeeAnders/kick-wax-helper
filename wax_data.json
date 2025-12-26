@@ -1,0 +1,552 @@
+{
+  "version": "2.0",
+  "scope": "Classic grip – new/old/wet",
+  "products": [
+    {
+      "id": "_v05",
+      "brand": "",
+      "line": "V",
+      "code": "V05",
+      "product": "Polar Grip Wax",
+      "type": "hardwax",
+      "segment": "training",
+      "temp_ranges": {
+        "new": {
+          "min": -25,
+          "max": -12
+        },
+        "old": {
+          "min": -30,
+          "max": -15
+        },
+        "wet": null
+      },
+      "priority": 65,
+      "notes": [
+        "Very cold extreme"
+      ],
+      "imageFile": "swix-v05.webp",
+      "active": true
+    },
+    {
+      "id": "_v20",
+      "brand": "",
+      "line": "V",
+      "code": "V20",
+      "product": "Green Grip Wax",
+      "type": "hardwax",
+      "segment": "training",
+      "temp_ranges": {
+        "new": {
+          "min": -15,
+          "max": -8
+        },
+        "old": {
+          "min": -18,
+          "max": -10
+        },
+        "wet": null
+      },
+      "priority": 70,
+      "notes": [
+        "Cold snow"
+      ],
+      "imageFile": "swix-v20.webp",
+      "active": true
+    },
+    {
+      "id": "_v30",
+      "brand": "",
+      "line": "V",
+      "code": "V30",
+      "product": "Blue Grip Wax",
+      "type": "hardwax",
+      "segment": "training",
+      "temp_ranges": {
+        "new": {
+          "min": -10,
+          "max": -2
+        },
+        "old": {
+          "min": -15,
+          "max": -5
+        },
+        "wet": null
+      },
+      "priority": 72,
+      "notes": [
+        "Cold to moderate"
+      ],
+      "imageFile": "swix-v30.webp",
+      "active": true
+    },
+    {
+      "id": "_v40",
+      "brand": "",
+      "line": "V",
+      "code": "V40",
+      "product": "Blue Extra Grip Wax",
+      "type": "hardwax",
+      "segment": "training",
+      "temp_ranges": {
+        "new": {
+          "min": -7,
+          "max": -1
+        },
+        "old": {
+          "min": -10,
+          "max": -3
+        },
+        "wet": null
+      },
+      "priority": 74,
+      "notes": [
+        "Most popular classic"
+      ],
+      "imageFile": "swix-v40.webp",
+      "active": true
+    },
+    {
+      "id": "_v45",
+      "brand": "",
+      "line": "V",
+      "code": "V45",
+      "product": "Violet Special Wax",
+      "type": "hardwax",
+      "segment": "training",
+      "temp_ranges": {
+        "new": {
+          "min": -3,
+          "max": 0
+        },
+        "old": {
+          "min": -6,
+          "max": -2
+        },
+        "wet": null
+      },
+      "priority": 73,
+      "notes": [
+        "Slightly warmer"
+      ],
+      "imageFile": "swix-v45.webp",
+      "active": true
+    },
+    {
+      "id": "_v50",
+      "brand": "",
+      "line": "V",
+      "code": "V50",
+      "product": "Violet Wax",
+      "type": "hardwax",
+      "segment": "training",
+      "temp_ranges": {
+        "new": {
+          "min": 0,
+          "max": 0
+        },
+        "old": {
+          "min": -1,
+          "max": 0
+        },
+        "wet": null
+      },
+      "priority": 70,
+      "notes": [
+        "Zero condition"
+      ],
+      "imageFile": "swix-v50.webp",
+      "active": true
+    },
+    {
+      "id": "_v55",
+      "brand": "",
+      "line": "V",
+      "code": "V55",
+      "product": "Red Special Wax",
+      "type": "hardwax",
+      "segment": "training",
+      "temp_ranges": {
+        "new": {
+          "min": 0,
+          "max": 1
+        },
+        "old": {
+          "min": -2,
+          "max": 1
+        },
+        "wet": null
+      },
+      "priority": 70,
+      "notes": [
+        "Near zero"
+      ],
+      "imageFile": "swix-v55.webp",
+      "active": true
+    },
+    {
+      "id": "_v60",
+      "brand": "",
+      "line": "V",
+      "code": "V60",
+      "product": "Red/Silver Wax",
+      "type": "hardwax",
+      "segment": "training",
+      "temp_ranges": {
+        "new": {
+          "min": 0,
+          "max": 3
+        },
+        "old": {
+          "min": -1,
+          "max": 2
+        },
+        "wet": null
+      },
+      "priority": 68,
+      "notes": [
+        "Warm snow"
+      ],
+      "imageFile": "swix-v60.webp",
+      "active": true
+    },
+    {
+      "id": "_vp30",
+      "brand": "",
+      "line": "VP",
+      "code": "VP30",
+      "product": "Pro Blue",
+      "type": "hardwax",
+      "segment": "race",
+      "temp_ranges": {
+        "new": {
+          "min": -16,
+          "max": -8
+        },
+        "old": {
+          "min": -20,
+          "max": -10
+        },
+        "wet": null
+      },
+      "priority": 80,
+      "notes": [
+        "Pro cold"
+      ],
+      "imageFile": "swix_vp30.png",
+      "active": true
+    },
+    {
+      "id": "_vp40",
+      "brand": "",
+      "line": "VP",
+      "code": "VP40",
+      "product": "Pro Light Blue",
+      "type": "hardwax",
+      "segment": "race",
+      "temp_ranges": {
+        "new": {
+          "min": -10,
+          "max": -4
+        },
+        "old": {
+          "min": -14,
+          "max": -6
+        },
+        "wet": null
+      },
+      "priority": 80,
+      "notes": [
+        "Pro"
+      ],
+      "imageFile": "swix_vp40.png",
+      "active": true
+    },
+    {
+      "id": "_vp45",
+      "brand": "",
+      "line": "VP",
+      "code": "VP45",
+      "product": "Pro Violet",
+      "type": "hardwax",
+      "segment": "race",
+      "temp_ranges": {
+        "new": {
+          "min": -5,
+          "max": -1
+        },
+        "old": {
+          "min": -10,
+          "max": -3
+        },
+        "wet": null
+      },
+      "priority": 80,
+      "notes": [
+        "Pro"
+      ],
+      "imageFile": "swix_vp45.png",
+      "active": true
+    },
+    {
+      "id": "_vp50",
+      "brand": "",
+      "line": "VP",
+      "code": "VP50",
+      "product": "Pro Light Violet",
+      "type": "hardwax",
+      "segment": "race",
+      "temp_ranges": {
+        "new": {
+          "min": -3,
+          "max": 0
+        },
+        "old": {
+          "min": -5,
+          "max": 1
+        },
+        "wet": null
+      },
+      "priority": 78,
+      "notes": [
+        "Pro"
+      ],
+      "imageFile": "swix_vp50.png",
+      "active": true
+    },
+    {
+      "id": "_vp55",
+      "brand": "",
+      "line": "VP",
+      "code": "VP55",
+      "product": "Pro Violet",
+      "type": "hardwax",
+      "segment": "race",
+      "temp_ranges": {
+        "new": {
+          "min": -2,
+          "max": 1
+        },
+        "old": {
+          "min": -3,
+          "max": 2
+        },
+        "wet": null
+      },
+      "priority": 78,
+      "notes": [
+        "Pro"
+      ],
+      "imageFile": "swix_vp55.png",
+      "active": true
+    },
+    {
+      "id": "_vp60",
+      "brand": "",
+      "line": "VP",
+      "code": "VP60",
+      "product": "Pro Violet/Red",
+      "type": "hardwax",
+      "segment": "race",
+      "temp_ranges": {
+        "new": {
+          "min": -1,
+          "max": 2
+        },
+        "old": {
+          "min": -2,
+          "max": 3
+        },
+        "wet": null
+      },
+      "priority": 76,
+      "notes": [
+        "Pro"
+      ],
+      "imageFile": "swix_vp60.png",
+      "active": true
+    },
+    {
+      "id": "_vp65",
+      "brand": "",
+      "line": "VP",
+      "code": "VP65",
+      "product": "Pro Black/Red",
+      "type": "hardwax",
+      "segment": "race",
+      "temp_ranges": {
+        "new": {
+          "min": 0,
+          "max": 2
+        },
+        "old": {
+          "min": -1,
+          "max": 3
+        },
+        "wet": null
+      },
+      "priority": 76,
+      "notes": [
+        "Pro"
+      ],
+      "imageFile": "swix_vp65.png",
+      "active": true
+    },
+    {
+      "id": "_vp70",
+      "brand": "",
+      "line": "VP",
+      "code": "VP70",
+      "product": "Pro Yellow",
+      "type": "hardwax",
+      "segment": "race",
+      "temp_ranges": {
+        "new": {
+          "min": 0,
+          "max": 3
+        },
+        "old": {
+          "min": 0,
+          "max": 4
+        },
+        "wet": null
+      },
+      "priority": 75,
+      "notes": [
+        "Pro warm"
+      ],
+      "imageFile": "swix_vp70.png",
+      "active": true
+    },
+    {
+      "id": "_gripviolet",
+      "brand": "",
+      "line": "XC",
+      "code": "GRIP VIOLET",
+      "product": "XC Kickwax Violet",
+      "type": "hardwax",
+      "segment": "training",
+      "temp_ranges": {
+        "new": {
+          "min": -9,
+          "max": -1
+        },
+        "old": {
+          "min": -12,
+          "max": -3
+        },
+        "wet": null
+      },
+      "priority": 70,
+      "notes": [
+        "All types"
+      ],
+      "imageFile": "skigo_xc_violet.png",
+      "active": true
+    },
+    {
+      "id": "_gripblue",
+      "brand": "",
+      "line": "XC",
+      "code": "GRIP BLUE",
+      "product": "XC Kickwax Blue",
+      "type": "hardwax",
+      "segment": "training",
+      "temp_ranges": {
+        "new": {
+          "min": -10,
+          "max": -3
+        },
+        "old": {
+          "min": -12,
+          "max": -5
+        },
+        "wet": null
+      },
+      "priority": 70,
+      "notes": [
+        "Cold conditions"
+      ],
+      "imageFile": "skigo_xc_blue.png",
+      "active": true
+    },
+    {
+      "id": "_ffrracingviolet",
+      "brand": "",
+      "line": "FFR",
+      "code": "FFR Racing Violet",
+      "product": "FFR Racing Grip Violet",
+      "type": "hardwax",
+      "segment": "race",
+      "temp_ranges": {
+        "new": {
+          "min": -12,
+          "max": -1
+        },
+        "old": {
+          "min": -15,
+          "max": -3
+        },
+        "wet": null
+      },
+      "priority": 78,
+      "notes": [
+        "Race oriented"
+      ],
+      "imageFile": "skigo_ffr_violet.png",
+      "active": true
+    },
+    {
+      "id": "_ffrracingblue",
+      "brand": "",
+      "line": "FFR",
+      "code": "FFR Racing Blue",
+      "product": "FFR Racing Grip Blue",
+      "type": "hardwax",
+      "segment": "race",
+      "temp_ranges": {
+        "new": {
+          "min": -10,
+          "max": -3
+        },
+        "old": {
+          "min": -15,
+          "max": -5
+        },
+        "wet": null
+      },
+      "priority": 78,
+      "notes": [
+        "Race oriented"
+      ],
+      "imageFile": "skigo_ffr_blue.png",
+      "active": true
+    },
+    {
+      "id": "_ffrracingyellow",
+      "brand": "",
+      "line": "FFR",
+      "code": "FFR Racing Yellow",
+      "product": "FFR Racing Grip Yellow",
+      "type": "hardwax",
+      "segment": "race",
+      "temp_ranges": {
+        "new": {
+          "min": -1,
+          "max": 5
+        },
+        "old": {
+          "min": -3,
+          "max": 3
+        },
+        "wet": null
+      },
+      "priority": 76,
+      "notes": [
+        "Warm/wet bias"
+      ],
+      "imageFile": "skigo_ffr_yellow.png",
+      "active": true
+    }
+  ]
+}
