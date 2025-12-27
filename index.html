@@ -3,13 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Kick Wax Helper – Classic Grip</title>
+  <title>VÅRBY IK Kick Wax Helper – Classic Grip</title>
   <style>
-    :root { --pad: 14px; --radius: 14px; }
+    :root {
+  --pad: 14px;
+  --radius: 14px;
+
+  /* Vårby IK Colors */
+  --club-blue: #0F3D61;
+  --club-blue-dark: #0A3352;
+  --club-yellow: #FFD400;
+}
+
     body {
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       margin: 0;
-      background: #f6f7f9;
+      background: #f4f7fb;
       color: #111;
     }
     header {
@@ -25,10 +34,10 @@
 
     .card {
       background: white;
-      border: 1px solid #e6e8ee;
+      border: 1px solid #dbe4f4;
       border-radius: var(--radius);
       padding: var(--pad);
-      box-shadow: 0 1px 2px rgba(0,0,0,.03);
+      box-shadow: 0 1px 2px rgba(0,0,0,.04);
     }
     .grid { display: grid; gap: 14px; }
     @media (min-width: 860px) {
@@ -51,16 +60,28 @@
       padding: 8px 12px;
       font-size: 14px;
     }
-    button.primary { background: #111; color: #fff; border-color: #111; }
-    button.active { border-color: #111; box-shadow: inset 0 0 0 1px #111; }
+      button.primary {
+          background: var(--club-blue);
+          color: white;
+          border-color: var(--club-blue);
+        }
+        button.primary:hover {
+          background: var(--club-blue-dark);
+        }
+      button.active {
+          border-color: var(--club-blue);
+          box-shadow: inset 0 0 0 2px var(--club-blue);
+          background: rgba(15,61,97,0.08);
+      }
+
 
     .chips { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
     .chip {
       font-size: 12px;
       padding: 4px 9px;
       border-radius: 999px;
-      border: 1px solid #e6e8ee;
-      background: #fafbfc;
+      border: 1px solid #d3dff2;
+      background: #f2f7ff;
     }
     .muted { color: #666; font-size: 13px; line-height: 1.35; }
     .warning {
@@ -118,7 +139,7 @@
 
 <body>
 <header>
-  <h1>Kick Wax Helper – Classic Grip</h1>
+  <h1>VÅRBY IK Kick Wax Helper – Classic Grip</h1>
 </header>
 
 <main class="grid two">
@@ -129,26 +150,39 @@
     <label for="temp">Temperature (°C)</label>
     <input id="temp" type="number" step="0.5" value="-3" />
 
-    <div class="row" aria-label="Quick temperature buttons">
-      <button type="button" data-temp="-15">-15</button>
-      <button type="button" data-temp="-10">-10</button>
-      <button type="button" data-temp="-5">-5</button>
-      <button type="button" data-temp="0">0</button>
-      <button type="button" data-temp="2">+2</button>
-    </div>
+   <div class="row" aria-label="Quick temperature buttons">
+    <button type="button" data-temp="-15">-15</button>
+    <button type="button" data-temp="-10">-10</button>
+    <button type="button" data-temp="-5">-5</button>
+    <button type="button" data-temp="-2">-2</button>
+    <button type="button" data-temp="0">0</button>
+    <button type="button" data-temp="2">+2</button>
+    <button type="button" data-temp="5">+5</button>
+   </div>
 
     <div class="divider"></div>
 
     <label>Snow type</label>
     <div class="row" role="group" aria-label="Snow type">
-      <button type="button" class="active" data-cond="new">New Snow</button>
-      <button type="button" data-cond="old">Old Snow / Transformed</button>
-      <button type="button" data-cond="wet">Wet Snow</button>
+      <button type="button" class="active" data-cond="new">❄️ New Snow</button>
+      <button type="button" data-cond="old">🧊 Old / Transformed</button>
+      <button type="button" data-cond="wet">💧 Wet Snow</button>
     </div>
+
 
     <p class="muted" style="margin-top:10px;">
       New Snow = fresh, fine-grained. Old Snow / Transformed = old, coarse, hard track, manmade. Wet Snow = moist, wet, icy or refrozen.
     </p>
+
+    <div class="divider"></div>
+
+    <label>Brand</label>
+    <div class="row" role="group" aria-label="Brand filter">
+      <button type="button" class="active" data-brand="all">All</button>
+      <button type="button" data-brand="swix">Swix</button>
+      <button type="button" data-brand="rode">Rode</button>
+      <button type="button" data-brand="skigo">Skigo</button>
+    </div>
 
     <div class="divider"></div>
 
@@ -204,6 +238,7 @@ const CONDITION_LABELS = {
 // ----- Global wax data -----
 let waxData = null; // { version, scope, products: [...] }
 let selectedCondition = "new";
+let selectedBrand = "all"; // "all", "swix", "rode", "skigo"
 
 // ----- DOM references -----
 const tempEl        = document.getElementById("temp");
@@ -238,11 +273,12 @@ async function loadWaxData() {
 }
 
 // ----- Core chooser logic -----
-// opts: { marginC, maxResults, segment }
+// opts: { marginC, maxResults, segment, brandFilter }
 function chooseGripWax(temperatureC, conditionKey, data, opts = {}) {
-  const marginC   = opts.marginC ?? 1;
-  const maxResults= opts.maxResults ?? 3;
-  const segment   = opts.segment ? String(opts.segment).toLowerCase() : null;
+  const marginC     = opts.marginC ?? 1;
+  const maxResults  = opts.maxResults ?? 3;
+  const segment     = opts.segment ? String(opts.segment).toLowerCase() : null;
+  const brandFilter = opts.brandFilter ? String(opts.brandFilter).toLowerCase() : "all";
 
   const products = data.products ?? [];
 
@@ -257,13 +293,18 @@ function chooseGripWax(temperatureC, conditionKey, data, opts = {}) {
     if (segment) {
       const segVal =
         (p.segment ??
-         p["Race/Training"] ?? // just in case
+         p["Race/Training"] ??
          p.race_training ??
          ""
         ).toString().toLowerCase();
 
-      // If segment is set on product and doesn't match, skip
       if (segVal && segVal !== segment) return false;
+    }
+
+    // Brand filter
+    if (brandFilter && brandFilter !== "all") {
+      const b = (p.brand || "").toString().toLowerCase();
+      if (b !== brandFilter) return false;
     }
 
     const ranges = p.temp_ranges || {};
@@ -324,6 +365,14 @@ function setCondition(cond) {
   document.querySelector(`[data-cond="${cond}"]`).classList.add("active");
 }
 
+function setBrand(brand) {
+  selectedBrand = brand;
+  document.querySelectorAll("[data-brand]").forEach(btn =>
+    btn.classList.remove("active")
+  );
+  document.querySelector(`[data-brand="${brand}"]`).classList.add("active");
+}
+
 document.querySelectorAll("[data-temp]").forEach(btn => {
   btn.addEventListener("click", () => {
     tempEl.value = btn.getAttribute("data-temp");
@@ -331,7 +380,15 @@ document.querySelectorAll("[data-temp]").forEach(btn => {
 });
 
 document.querySelectorAll("[data-cond]").forEach(btn => {
-  btn.addEventListener("click", () => setCondition(btn.getAttribute("data-cond")));
+  btn.addEventListener("click", () => {
+    setCondition(btn.getAttribute("data-cond"));
+  });
+});
+
+document.querySelectorAll("[data-brand]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    setBrand(btn.getAttribute("data-brand"));
+  });
 });
 
 // Render race + training
@@ -348,25 +405,31 @@ function renderRecommendations() {
   const raceOut = chooseGripWax(t, selectedCondition, waxData, {
     marginC: 1,
     maxResults: 3,
-    segment: "race"
+    segment: "race",
+    brandFilter: selectedBrand
   });
 
   const trainOut = chooseGripWax(t, selectedCondition, waxData, {
     marginC: 1,
     maxResults: 3,
-    segment: "training"
+    segment: "training",
+    brandFilter: selectedBrand
   });
 
+  const brandLabel = selectedBrand === "all"
+    ? "All brands"
+    : (selectedBrand.charAt(0).toUpperCase() + selectedBrand.slice(1));
+
   debugEl.textContent =
-    `Temp ${t}°C, ${CONDITION_LABELS[selectedCondition]} – ` +
+    `Temp ${t}°C, ${CONDITION_LABELS[selectedCondition]}, Brand: ${brandLabel} – ` +
     `${waxData.products.length} products total, ` +
     `${raceOut.candidateCount} race candidates, ` +
     `${trainOut.candidateCount} training candidates.`;
 
   summaryRaceEl.textContent  =
-    `At ${t}°C, ${CONDITION_LABELS[selectedCondition]} (Race):`;
+    `At ${t}°C, ${CONDITION_LABELS[selectedCondition]} (Race, ${brandLabel}):`;
   summaryTrainEl.textContent =
-    `At ${t}°C, ${CONDITION_LABELS[selectedCondition]} (Training/Touring):`;
+    `At ${t}°C, ${CONDITION_LABELS[selectedCondition]} (Training/Touring, ${brandLabel}):`;
 
   // Warnings (same for race+training)
   warningsEl.innerHTML = "";
@@ -464,13 +527,13 @@ function renderRecommendations() {
   renderList(
     resultsRaceEl,
     raceOut.results,
-    "No race waxes matched these conditions. Try a different snow type or temperature."
+    "No race waxes matched these conditions. Try a different snow type, brand or temperature."
   );
 
   renderList(
     resultsTrainEl,
     trainOut.results,
-    "No training/touring waxes matched these conditions. Try a different snow type or temperature."
+    "No training/touring waxes matched these conditions. Try a different snow type, brand or temperature."
   );
 
   // Application help based on top result type (prefer race if exists, else training)

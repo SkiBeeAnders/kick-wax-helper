@@ -1,22 +1,60 @@
-﻿brand,line,Race/Training,code,product_name,type,temp_new_min,temp_new_max,temp_old_min,temp_old_max,temp_wet_min,temp_wet_max,notes,image_file,priority,active
-Swix,V,Training,V05,Polar Grip Wax,hardwax,−25,−12,−30,−15,,,Very cold extreme,swix-v05.webp,65,yes
-Swix,V,Training,V20,Green Grip Wax,hardwax,−15,−8,−18,−10,,,Cold snow,swix-v20.webp,70,yes
-Swix,V,Training,V30,Blue Grip Wax,hardwax,−10,−2,−15,−5,,,Cold to moderate,swix-v30.webp,72,yes
+brand,line,Race/Training,code,product_name,type,temp_new_min,temp_new_max,temp_old_min,temp_old_max,temp_wet_min,temp_wet_max,notes,image_file,priority,active
+Skigo,FFR,Race,FFR Racing Blue,FFR Racing Grip Blue,hardwax,−10,−3,−15,−5,,,Race oriented,skigo-ffr-blue.webp,78,yes
+Skigo,FFR,Race,FFR Racing Violet,FFR Racing Grip Violet,hardwax,−12,−1,−15,−3,,,Race oriented,skigo-ffr-violet.webp,78,yes
+Skigo,FFR,Race,FFR Racing Yellow,FFR Racing Grip Yellow,hardwax,−1,5,−3,3,,,Warm/wet bias,skigo-ffr-yellow.webp,76,yes
+Skigo,XC,Training,GREEN,XC Grön,hardwax,−20,−7,−22,−6,,,"För mycket kalla förhållanden, bra även som täckvalla vid kärvt före",SkigoXCBurkvalla-Gron.webp,80,yes
+Skigo,XC,Training,YELLOW,XC Gul,hardwax,−1,5,−3,6,−3,4,Lite grövre snö runt noll till varmare. Om ej fäste → klister,SkigoXCGULFinnishVersion.webp,78,yes
+Skigo,XC,Training,GRIP BLUE,XC Kickwax Blue,hardwax,−10,−3,−12,−2,,,Cold conditions,skigo-blue.webp,70,yes
+Skigo,XC,Training,GRIP VIOLET,XC Kickwax Violet,hardwax,−9,−1,−11,0,,,All types,skigo-violett.webp,70,yes
+Skigo,XC,Training,ORANGE,XC Orange,hardwax,−2,3,−4,4,−1,3,"Växlande runt 0°C, svåra förhållanden på båda sidor om noll",ski-go_orange_hard.gif,78,yes
+Skigo,XC,Training,RED,XC Röd,hardwax,−2,0,−4,1,,,För 0 till några minus. Bra som extra lager ovanpå violett/blå,skigo-xc-kickwax-orange-3-2-826953.webp,78,yes
+Skigo,XC,Training,WC_TEST,XC WC Test,hardwax,−15,−2,−17,−1,,,Tävlingsutvecklad valla för kallföre. Distinkt fäste utan att bromsa glid,SkigoXCBurkvalla.webp,85,yes
+Skigo,XC,Training,YELLOW_FINN,XC Yellow Finnish Version,hardwax,−10,−1,−12,0,,,"För äldre transformerad snö, stabil i varierande förhållanden",SkigoXCBurkvalla.webp,80,yes
+Skigo,XC,Race,BLUE,XC Klister Blue,klister,,,−10,−2,,,"Slitstarkt blått klister för grovkornig/snö och is i kalla temperaturer, bra som underlagsklister",90270-Klister-XC-Blue.avif,80,yes
+Skigo,XC,Race,ORANGE,XC Klister Orange,klister,,,4,8,4,10,"Orange klister för glatta spår och riktigt blöta, varma förhållanden",klister-XC-orange.avif,85,yes
+Skigo,XC,Race,RED,XC Klister Red,klister,,,1,5,1,5,"Rött klister när snön går från frusen till våt, blöta spår",Klister-xc-Red.avif,84,yes
+Skigo,XC,Race,SILVER,XC Klister Silver,klister,,,−1,3,−1,5,"Silverklister för svårvallade förhållanden från några minus till några plus, bra att mixa",90273-Klister-XC-Silver.avif,84,yes
+Skigo,XC,Race,UNIV,XC Klister Universal,klister,,,−1,3,−1,3,"Universalklister för våta förhållanden, temperaturer ungefär +3 till -1 °C",Klister-XC-Universal.avif,83,yes
+Skigo,XC,Race,VIOLET,XC Klister Violet,klister,,,−4,3,−1,3,"Violett klister för kornig/grov snö runt noll, mycket gångbart som underlagsklister",skigo-Klister-XC-violet-1.avif,82,yes
 Swix,V,Training,V40,Blue Extra Grip Wax,hardwax,−7,−1,−10,−3,,,Most popular classic,swix-v40.webp,74,yes
-Swix,V,Training,V45,Violet Special Wax,hardwax,−3,0,−6,−2,,,Slightly warmer,swix-v45.webp,73,yes
-Swix,V,Training,V50,Violet Wax,hardwax,0,0,−1,0,,,Zero condition,swix-v50.webp,70,yes
-Swix,V,Training,V55,Red Special Wax,hardwax,0,1,−2,1,,,Near zero,swix-v55.webp,70,yes
-Swix,V,Training,V60,Red/Silver Wax,hardwax,0,3,−1,2,,,Warm snow,swix-v60.webp,68,yes
+Swix,V,Training,V30,Blue Grip Wax,hardwax,−10,−2,−15,−5,,,Cold to moderate,swix-v30.webp,72,yes
+Swix,V,Training,V20,Green Grip Wax,hardwax,−15,−8,−18,−10,,,Cold snow,swix-v20.webp,70,yes
+Swix,V,Training,V05,Polar Grip Wax,hardwax,−25,−12,−30,−15,,,Very cold extreme,swix-v05.webp,65,yes
+Swix,VP,Race,VP65,Pro Black/Red,hardwax,0,2,−1,3,−1,2,Pro,swix_vp65.png,76,yes
 Swix,VP,Race,VP30,Pro Blue,hardwax,−16,−8,−20,−10,,,Pro cold,swix_vp30.png,80,yes
 Swix,VP,Race,VP40,Pro Light Blue,hardwax,−10,−4,−14,−6,,,Pro,swix_vp40.png,80,yes
+Swix,VP,Race,VP50,Pro Light Violet,hardwax,−3,0,−5,1,−1,1,Pro,swix_vp50.png,78,yes
 Swix,VP,Race,VP45,Pro Violet,hardwax,−5,−1,−10,−3,,,Pro,swix_vp45.png,80,yes
-Swix,VP,Race,VP50,Pro Light Violet,hardwax,−3,0,−5,1,,,Pro,swix_vp50.png,78,yes
 Swix,VP,Race,VP55,Pro Violet,hardwax,−2,1,−3,2,,,Pro,swix_vp55.png,78,yes
 Swix,VP,Race,VP60,Pro Violet/Red,hardwax,−1,2,−2,3,,,Pro,swix_vp60.png,76,yes
-Swix,VP,Race,VP65,Pro Black/Red,hardwax,0,2,−1,3,,,Pro,swix_vp65.png,76,yes
-Swix,VP,Race,VP70,Pro Yellow,hardwax,0,3,0,4,,,Pro warm,swix_vp70.png,75,yes
-Skigo,XC,Training,GRIP VIOLET,XC Kickwax Violet,hardwax,−9,−1,−12,−3,,,All types,skigo_xc_violet.png,70,yes
-Skigo,XC,Training,GRIP BLUE,XC Kickwax Blue,hardwax,−10,−3,−12,−5,,,Cold conditions,skigo_xc_blue.png,70,yes
-Skigo,FFR,Race,FFR Racing Violet,FFR Racing Grip Violet,hardwax,−12,−1,−15,−3,,,Race oriented,skigo_ffr_violet.png,78,yes
-Skigo,FFR,Race,FFR Racing Blue,FFR Racing Grip Blue,hardwax,−10,−3,−15,−5,,,Race oriented,skigo_ffr_blue.png,78,yes
-Skigo,FFR,Race,FFR Racing Yellow,FFR Racing Grip Yellow,hardwax,−1,5,−3,3,,,Warm/wet bias,skigo_ffr_yellow.png,76,yes
+Swix,VP,Race,VP70,Pro Yellow,hardwax,0,3,0,4,−1,3,Pro warm,swix_vp70.png,75,yes
+Swix,V,Training,V55,Red Special Wax,hardwax,0,1,−2,1,−1,0,Near zero,swix-v55.webp,70,yes
+Swix,V,Training,V60,Red/Silver Wax,hardwax,0,3,−1,2,−1,1,Warm snow,swix-v60.webp,68,yes
+Swix,V,Training,V45,Violet Special Wax,hardwax,−3,0,−6,−2,,,Slightly warmer,swix-v45.webp,73,yes
+Swix,V,Training,V50,Violet Wax,hardwax,0,0,−1,0,,,Zero condition,swix-v50.webp,70,yes
+Swix,KN,Race,KN33,KN33 Nero Klister,klister,,,−7,1,−3,1,"Nero-klister med mindre isningsrisk, brett spann runt noll, tävlingsinriktat",ynivoj18cno3gdzdtytx.webp,90,yes
+Swix,KN,Race,KN44,KN44 Nero Klister,klister,,,−3,3,−1,5,"Nero-klister för grovkornig/blöt snö kring 0 till några plusgrader, tävlingsvalla",bgpd4c68vs4mbimqjvms.webp,90,yes
+Swix,KX,Race,KX20,KX20 Green Base Klister,klister,,,−20,5,−20,5,"Green base klister, slitstarkt underlag för kallt/varmt, används som grundklister",usazjzof84dkiwskuy8t.webp,70,yes
+Swix,KX,Race,KX30,KX30 Blue Ice Klister,klister,,,−12,0,−6,0,Ice klister för grovkornig snö/skarsnö/is. Kan även användas som underlags-/mellanklister,m6fcfthgizy8lbh8umjn.webp,82,yes
+Swix,KX,Race,KX40S,KX40S Silver Klister,klister,,,−4,2,−2,2,"Silverklister för finkornig transformerad snö kring noll, går långt in i torr snö utan isning",tt9ts2bfck3hf5qisjyp.webp,84,yes
+Swix,KX,Race,KX45N,KX45N Violet Special Klister,klister,,,−4,1,−2,4,"Allround-klister för grovkornig/fuktig snö, växlande runt 0 °C",oorwzd3mjzmbevzqgcvk.webp,85,yes
+Swix,KX,Race,KX55,KX55 Violet Extra,klister,,,−6,4,−2,4,Most old transformed snow,frfnucqmbxqd51bp97gq.webp,82,yes
+Swix,KX,Race,KX65,KX65 Red Klister,klister,,,0,3,1,5,"Rött klister för grovkornig, fuktig och blöt snö, +grader",kamw7ukcjn7cxvdcmeoo.webp,86,yes
+Swix,KX,Race,KX75,KX75 Red Extra Wet Klister,klister,,,1,5,2,15,"Extra våtklister för slask, hög vattenhalt, sent vårföre",xhicugdstrg6ca2fp45p.webp,87,yes
+Swix,K,Race,K21S,K21S Uni Silver,klister,,,−5,3,−2,3,Transformed snow from fine to coarse snow,lqg4szvh85o8nhvn7yw4.webp,80,yes
+Swix,K,Race,K22,K22 Uni VM,klister,,,−3,10,−3,10,Universal silver klister for recrational and racing skiers,grhcdoo007yyw19gohgc.webp,88,yes
+Swix,KX,Race,KX35N,KX35N Blue extra,klister,,,−8,0,−4,0,Most old transformed snow,rgf0p0qwvjx6o6cz4rua.webp,82,yes
+Rode,R,Race,Rode,Green,hardwax,−15,−7,−13,−5,,,"Very cold, dry, sharp crystals; classic cold-snow Rode wax",250003-p20_2.jpg,82,yes
+Rode,R,Race,Rode,Green Special,hardwax,−30,−10,−28,−8,,,Extremely cold conditions; used when snow is very dry and abrasive,250003-p15_1.jpg,82,yes
+Rode,R,Race,Rode,Blue Multigrade,hardwax,−12,−5,−10,−3,,,Wide-range blue; stable across varying cold new-snow conditions,250003-p36_2.jpg,82,yes
+Rode,R,Race,Rode,Blue Super Extra,hardwax,−10,−3,−8,−1,,,For fine new snow close to freezing but still cold; high grip,250003-p38_1_1.jpg,82,yes
+Rode,R,Race,Rode,Blue Super,hardwax,−10,−3,−8,−1,,,Rode’s iconic blue; very reliable in typical winter new snow,250003-p32_1_1.jpg,82,yes
+Rode,R,Race,Rode,Blue Super Weiss,hardwax,−7,−3,−5,−1,,,Slightly warmer than Blue Super; good for moist fine snow,250003-p28_1.jpg,82,yes
+Rode,R,Race,Rode,Blue I,hardwax,−6,−2,−4,0,,,For fine new snow approaching 0°C; good in humid cold conditions,250003-p30_1.jpg,82,yes
+Rode,R,Race,Rode,Blue II,hardwax,−8,−2,−6,0,,,Slightly colder than Blue I; good all-round blue for fine snow,250003-p34_1.jpg,82,yes
+Rode,R,Race,Rode,Violett Multigrade,hardwax,−5,−3,−3,−1,,,For moist fine snow near freezing; good in variable conditions,250003-p46_1_1.jpg,82,yes
+Rode,R,Race,Rode,Violett,hardwax,−4,−2,−2,0,−1,0,Standard violet for humid new snow; good when snow is glazing slightly,250003-p40_1_1.jpg,82,yes
+Rode,R,Race,Rode,Violett Extra,hardwax,−3,0,−1,2,−3,0,"For new snow at or just below freezing; excellent in moist, fine crystals",250003-p42_1.jpg,82,yes
+Rode,R,Race,Rode,Gul (Yellow),hardwax,1,4,3,6,1,4,"Warm, wet new snow; high moisture content; often paired with klister base",250003-p60_1_1.jpg,82,yes
+Rode,R,Race,Rode,Rossa (Red),hardwax,0,2,2,4,0,2,"Warm, slightly wet new snow; good when tracks soften",250003-p50_1.jpg,82,yes
+Rode,R,Race,Rode,Rot Extra,hardwax,0,2,2,4,0,2,"Extra grip in warm, wet fine snow; often used in tricky near‑zero conditions",250003-p52_1.jpg,82,yes

@@ -5,69 +5,17 @@
   "scope": "Classic grip – new/old/wet",
   "products": [
     {
-      "id": "_v05",
-      "brand": "",
-      "line": "V",
-      "code": "V05",
-      "product": "Polar Grip Wax",
+      "id": "skigo_ffrracingblue",
+      "brand": "Skigo",
+      "line": "FFR",
+      "code": "FFR Racing Blue",
+      "product": "FFR Racing Grip Blue",
       "type": "hardwax",
-      "segment": "training",
-      "temp_ranges": {
-        "new": {
-          "min": -25,
-          "max": -12
-        },
-        "old": {
-          "min": -30,
-          "max": -15
-        },
-        "wet": null
-      },
-      "priority": 65,
-      "notes": [
-        "Very cold extreme"
-      ],
-      "imageFile": "swix-v05.webp",
-      "active": true
-    },
-    {
-      "id": "_v20",
-      "brand": "",
-      "line": "V",
-      "code": "V20",
-      "product": "Green Grip Wax",
-      "type": "hardwax",
-      "segment": "training",
-      "temp_ranges": {
-        "new": {
-          "min": -15,
-          "max": -8
-        },
-        "old": {
-          "min": -18,
-          "max": -10
-        },
-        "wet": null
-      },
-      "priority": 70,
-      "notes": [
-        "Cold snow"
-      ],
-      "imageFile": "swix-v20.webp",
-      "active": true
-    },
-    {
-      "id": "_v30",
-      "brand": "",
-      "line": "V",
-      "code": "V30",
-      "product": "Blue Grip Wax",
-      "type": "hardwax",
-      "segment": "training",
+      "segment": "race",
       "temp_ranges": {
         "new": {
           "min": -10,
-          "max": -2
+          "max": -3
         },
         "old": {
           "min": -15,
@@ -75,16 +23,435 @@
         },
         "wet": null
       },
-      "priority": 72,
+      "priority": 78,
       "notes": [
-        "Cold to moderate"
+        "Race oriented"
       ],
-      "imageFile": "swix-v30.webp",
+      "imageFile": "skigo-ffr-blue.webp",
       "active": true
     },
     {
-      "id": "_v40",
-      "brand": "",
+      "id": "skigo_ffrracingviolet",
+      "brand": "Skigo",
+      "line": "FFR",
+      "code": "FFR Racing Violet",
+      "product": "FFR Racing Grip Violet",
+      "type": "hardwax",
+      "segment": "race",
+      "temp_ranges": {
+        "new": {
+          "min": -12,
+          "max": -1
+        },
+        "old": {
+          "min": -15,
+          "max": -3
+        },
+        "wet": null
+      },
+      "priority": 78,
+      "notes": [
+        "Race oriented"
+      ],
+      "imageFile": "skigo-ffr-violet.webp",
+      "active": true
+    },
+    {
+      "id": "skigo_ffrracingyellow",
+      "brand": "Skigo",
+      "line": "FFR",
+      "code": "FFR Racing Yellow",
+      "product": "FFR Racing Grip Yellow",
+      "type": "hardwax",
+      "segment": "race",
+      "temp_ranges": {
+        "new": {
+          "min": -1,
+          "max": 5
+        },
+        "old": {
+          "min": -3,
+          "max": 3
+        },
+        "wet": null
+      },
+      "priority": 76,
+      "notes": [
+        "Warm/wet bias"
+      ],
+      "imageFile": "skigo-ffr-yellow.webp",
+      "active": true
+    },
+    {
+      "id": "skigo_green",
+      "brand": "Skigo",
+      "line": "XC",
+      "code": "GREEN",
+      "product": "XC Grön",
+      "type": "hardwax",
+      "segment": "training",
+      "temp_ranges": {
+        "new": {
+          "min": -20,
+          "max": -7
+        },
+        "old": {
+          "min": -22,
+          "max": -6
+        },
+        "wet": null
+      },
+      "priority": 80,
+      "notes": [
+        "För mycket kalla förhållanden, bra även som täckvalla vid kärvt före"
+      ],
+      "imageFile": "SkigoXCBurkvalla-Gron.webp",
+      "active": true
+    },
+    {
+      "id": "skigo_yellow",
+      "brand": "Skigo",
+      "line": "XC",
+      "code": "YELLOW",
+      "product": "XC Gul",
+      "type": "hardwax",
+      "segment": "training",
+      "temp_ranges": {
+        "new": {
+          "min": -1,
+          "max": 5
+        },
+        "old": {
+          "min": -3,
+          "max": 6
+        },
+        "wet": {
+          "min": -3,
+          "max": 4
+        }
+      },
+      "priority": 78,
+      "notes": [
+        "Lite grövre snö runt noll till varmare. Om ej fäste → klister"
+      ],
+      "imageFile": "SkigoXCGULFinnishVersion.webp",
+      "active": true
+    },
+    {
+      "id": "skigo_gripblue",
+      "brand": "Skigo",
+      "line": "XC",
+      "code": "GRIP BLUE",
+      "product": "XC Kickwax Blue",
+      "type": "hardwax",
+      "segment": "training",
+      "temp_ranges": {
+        "new": {
+          "min": -10,
+          "max": -3
+        },
+        "old": {
+          "min": -12,
+          "max": -2
+        },
+        "wet": null
+      },
+      "priority": 70,
+      "notes": [
+        "Cold conditions"
+      ],
+      "imageFile": "skigo-blue.webp",
+      "active": true
+    },
+    {
+      "id": "skigo_gripviolet",
+      "brand": "Skigo",
+      "line": "XC",
+      "code": "GRIP VIOLET",
+      "product": "XC Kickwax Violet",
+      "type": "hardwax",
+      "segment": "training",
+      "temp_ranges": {
+        "new": {
+          "min": -9,
+          "max": -1
+        },
+        "old": {
+          "min": -11,
+          "max": 0
+        },
+        "wet": null
+      },
+      "priority": 70,
+      "notes": [
+        "All types"
+      ],
+      "imageFile": "skigo-violett.webp",
+      "active": true
+    },
+    {
+      "id": "skigo_orange",
+      "brand": "Skigo",
+      "line": "XC",
+      "code": "ORANGE",
+      "product": "XC Orange",
+      "type": "hardwax",
+      "segment": "training",
+      "temp_ranges": {
+        "new": {
+          "min": -2,
+          "max": 3
+        },
+        "old": {
+          "min": -4,
+          "max": 4
+        },
+        "wet": {
+          "min": -1,
+          "max": 3
+        }
+      },
+      "priority": 78,
+      "notes": [
+        "Växlande runt 0°C, svåra förhållanden på båda sidor om noll"
+      ],
+      "imageFile": "ski-go_orange_hard.gif",
+      "active": true
+    },
+    {
+      "id": "skigo_red",
+      "brand": "Skigo",
+      "line": "XC",
+      "code": "RED",
+      "product": "XC Röd",
+      "type": "hardwax",
+      "segment": "training",
+      "temp_ranges": {
+        "new": {
+          "min": -2,
+          "max": 0
+        },
+        "old": {
+          "min": -4,
+          "max": 1
+        },
+        "wet": null
+      },
+      "priority": 78,
+      "notes": [
+        "För 0 till några minus. Bra som extra lager ovanpå violett/blå"
+      ],
+      "imageFile": "skigo-xc-kickwax-orange-3-2-826953.webp",
+      "active": true
+    },
+    {
+      "id": "skigo_wc_test",
+      "brand": "Skigo",
+      "line": "XC",
+      "code": "WC_TEST",
+      "product": "XC WC Test",
+      "type": "hardwax",
+      "segment": "training",
+      "temp_ranges": {
+        "new": {
+          "min": -15,
+          "max": -2
+        },
+        "old": {
+          "min": -17,
+          "max": -1
+        },
+        "wet": null
+      },
+      "priority": 85,
+      "notes": [
+        "Tävlingsutvecklad valla för kallföre. Distinkt fäste utan att bromsa glid"
+      ],
+      "imageFile": "SkigoXCBurkvalla.webp",
+      "active": true
+    },
+    {
+      "id": "skigo_yellow_finn",
+      "brand": "Skigo",
+      "line": "XC",
+      "code": "YELLOW_FINN",
+      "product": "XC Yellow Finnish Version",
+      "type": "hardwax",
+      "segment": "training",
+      "temp_ranges": {
+        "new": {
+          "min": -10,
+          "max": -1
+        },
+        "old": {
+          "min": -12,
+          "max": 0
+        },
+        "wet": null
+      },
+      "priority": 80,
+      "notes": [
+        "För äldre transformerad snö, stabil i varierande förhållanden"
+      ],
+      "imageFile": "SkigoXCBurkvalla.webp",
+      "active": true
+    },
+    {
+      "id": "skigo_blue",
+      "brand": "Skigo",
+      "line": "XC",
+      "code": "BLUE",
+      "product": "XC Klister Blue",
+      "type": "klister",
+      "segment": "race",
+      "temp_ranges": {
+        "new": null,
+        "old": {
+          "min": -10,
+          "max": -2
+        },
+        "wet": null
+      },
+      "priority": 80,
+      "notes": [
+        "Slitstarkt blått klister för grovkornig/snö och is i kalla temperaturer, bra som underlagsklister"
+      ],
+      "imageFile": "90270-Klister-XC-Blue.avif",
+      "active": true
+    },
+    {
+      "id": "skigo_orange",
+      "brand": "Skigo",
+      "line": "XC",
+      "code": "ORANGE",
+      "product": "XC Klister Orange",
+      "type": "klister",
+      "segment": "race",
+      "temp_ranges": {
+        "new": null,
+        "old": {
+          "min": 4,
+          "max": 8
+        },
+        "wet": {
+          "min": 4,
+          "max": 10
+        }
+      },
+      "priority": 85,
+      "notes": [
+        "Orange klister för glatta spår och riktigt blöta, varma förhållanden"
+      ],
+      "imageFile": "klister-XC-orange.avif",
+      "active": true
+    },
+    {
+      "id": "skigo_red",
+      "brand": "Skigo",
+      "line": "XC",
+      "code": "RED",
+      "product": "XC Klister Red",
+      "type": "klister",
+      "segment": "race",
+      "temp_ranges": {
+        "new": null,
+        "old": {
+          "min": 1,
+          "max": 5
+        },
+        "wet": {
+          "min": 1,
+          "max": 5
+        }
+      },
+      "priority": 84,
+      "notes": [
+        "Rött klister när snön går från frusen till våt, blöta spår"
+      ],
+      "imageFile": "Klister-xc-Red.avif",
+      "active": true
+    },
+    {
+      "id": "skigo_silver",
+      "brand": "Skigo",
+      "line": "XC",
+      "code": "SILVER",
+      "product": "XC Klister Silver",
+      "type": "klister",
+      "segment": "race",
+      "temp_ranges": {
+        "new": null,
+        "old": {
+          "min": -1,
+          "max": 3
+        },
+        "wet": {
+          "min": -1,
+          "max": 5
+        }
+      },
+      "priority": 84,
+      "notes": [
+        "Silverklister för svårvallade förhållanden från några minus till några plus, bra att mixa"
+      ],
+      "imageFile": "90273-Klister-XC-Silver.avif",
+      "active": true
+    },
+    {
+      "id": "skigo_univ",
+      "brand": "Skigo",
+      "line": "XC",
+      "code": "UNIV",
+      "product": "XC Klister Universal",
+      "type": "klister",
+      "segment": "race",
+      "temp_ranges": {
+        "new": null,
+        "old": {
+          "min": -1,
+          "max": 3
+        },
+        "wet": {
+          "min": -1,
+          "max": 3
+        }
+      },
+      "priority": 83,
+      "notes": [
+        "Universalklister för våta förhållanden, temperaturer ungefär +3 till -1 °C"
+      ],
+      "imageFile": "Klister-XC-Universal.avif",
+      "active": true
+    },
+    {
+      "id": "skigo_violet",
+      "brand": "Skigo",
+      "line": "XC",
+      "code": "VIOLET",
+      "product": "XC Klister Violet",
+      "type": "klister",
+      "segment": "race",
+      "temp_ranges": {
+        "new": null,
+        "old": {
+          "min": -4,
+          "max": 3
+        },
+        "wet": {
+          "min": -1,
+          "max": 3
+        }
+      },
+      "priority": 82,
+      "notes": [
+        "Violett klister för kornig/grov snö runt noll, mycket gångbart som underlagsklister"
+      ],
+      "imageFile": "skigo-Klister-XC-violet-1.avif",
+      "active": true
+    },
+    {
+      "id": "swix_v40",
+      "brand": "Swix",
       "line": "V",
       "code": "V40",
       "product": "Blue Extra Grip Wax",
@@ -109,112 +476,115 @@
       "active": true
     },
     {
-      "id": "_v45",
-      "brand": "",
+      "id": "swix_v30",
+      "brand": "Swix",
       "line": "V",
-      "code": "V45",
-      "product": "Violet Special Wax",
+      "code": "V30",
+      "product": "Blue Grip Wax",
       "type": "hardwax",
       "segment": "training",
       "temp_ranges": {
         "new": {
-          "min": -3,
-          "max": 0
-        },
-        "old": {
-          "min": -6,
+          "min": -10,
           "max": -2
         },
+        "old": {
+          "min": -15,
+          "max": -5
+        },
         "wet": null
       },
-      "priority": 73,
+      "priority": 72,
       "notes": [
-        "Slightly warmer"
+        "Cold to moderate"
       ],
-      "imageFile": "swix-v45.webp",
+      "imageFile": "swix-v30.webp",
       "active": true
     },
     {
-      "id": "_v50",
-      "brand": "",
+      "id": "swix_v20",
+      "brand": "Swix",
       "line": "V",
-      "code": "V50",
-      "product": "Violet Wax",
+      "code": "V20",
+      "product": "Green Grip Wax",
       "type": "hardwax",
       "segment": "training",
       "temp_ranges": {
         "new": {
-          "min": 0,
-          "max": 0
+          "min": -15,
+          "max": -8
         },
         "old": {
-          "min": -1,
-          "max": 0
-        },
-        "wet": null
-      },
-      "priority": 70,
-      "notes": [
-        "Zero condition"
-      ],
-      "imageFile": "swix-v50.webp",
-      "active": true
-    },
-    {
-      "id": "_v55",
-      "brand": "",
-      "line": "V",
-      "code": "V55",
-      "product": "Red Special Wax",
-      "type": "hardwax",
-      "segment": "training",
-      "temp_ranges": {
-        "new": {
-          "min": 0,
-          "max": 1
-        },
-        "old": {
-          "min": -2,
-          "max": 1
+          "min": -18,
+          "max": -10
         },
         "wet": null
       },
       "priority": 70,
       "notes": [
-        "Near zero"
+        "Cold snow"
       ],
-      "imageFile": "swix-v55.webp",
+      "imageFile": "swix-v20.webp",
       "active": true
     },
     {
-      "id": "_v60",
-      "brand": "",
+      "id": "swix_v05",
+      "brand": "Swix",
       "line": "V",
-      "code": "V60",
-      "product": "Red/Silver Wax",
+      "code": "V05",
+      "product": "Polar Grip Wax",
       "type": "hardwax",
       "segment": "training",
       "temp_ranges": {
         "new": {
-          "min": 0,
-          "max": 3
+          "min": -25,
+          "max": -12
         },
         "old": {
-          "min": -1,
+          "min": -30,
+          "max": -15
+        },
+        "wet": null
+      },
+      "priority": 65,
+      "notes": [
+        "Very cold extreme"
+      ],
+      "imageFile": "swix-v05.webp",
+      "active": true
+    },
+    {
+      "id": "swix_vp65",
+      "brand": "Swix",
+      "line": "VP",
+      "code": "VP65",
+      "product": "Pro Black/Red",
+      "type": "hardwax",
+      "segment": "race",
+      "temp_ranges": {
+        "new": {
+          "min": 0,
           "max": 2
         },
-        "wet": null
+        "old": {
+          "min": -1,
+          "max": 3
+        },
+        "wet": {
+          "min": -1,
+          "max": 2
+        }
       },
-      "priority": 68,
+      "priority": 76,
       "notes": [
-        "Warm snow"
+        "Pro"
       ],
-      "imageFile": "swix-v60.webp",
+      "imageFile": "swix_vp65.png",
       "active": true
     },
     {
-      "id": "_vp30",
-      "brand": "",
+      "id": "swix_vp30",
+      "brand": "Swix",
       "line": "VP",
       "code": "VP30",
       "product": "Pro Blue",
@@ -239,8 +609,8 @@
       "active": true
     },
     {
-      "id": "_vp40",
-      "brand": "",
+      "id": "swix_vp40",
+      "brand": "Swix",
       "line": "VP",
       "code": "VP40",
       "product": "Pro Light Blue",
@@ -265,8 +635,37 @@
       "active": true
     },
     {
-      "id": "_vp45",
-      "brand": "",
+      "id": "swix_vp50",
+      "brand": "Swix",
+      "line": "VP",
+      "code": "VP50",
+      "product": "Pro Light Violet",
+      "type": "hardwax",
+      "segment": "race",
+      "temp_ranges": {
+        "new": {
+          "min": -3,
+          "max": 0
+        },
+        "old": {
+          "min": -5,
+          "max": 1
+        },
+        "wet": {
+          "min": -1,
+          "max": 1
+        }
+      },
+      "priority": 78,
+      "notes": [
+        "Pro"
+      ],
+      "imageFile": "swix_vp50.png",
+      "active": true
+    },
+    {
+      "id": "swix_vp45",
+      "brand": "Swix",
       "line": "VP",
       "code": "VP45",
       "product": "Pro Violet",
@@ -291,34 +690,8 @@
       "active": true
     },
     {
-      "id": "_vp50",
-      "brand": "",
-      "line": "VP",
-      "code": "VP50",
-      "product": "Pro Light Violet",
-      "type": "hardwax",
-      "segment": "race",
-      "temp_ranges": {
-        "new": {
-          "min": -3,
-          "max": 0
-        },
-        "old": {
-          "min": -5,
-          "max": 1
-        },
-        "wet": null
-      },
-      "priority": 78,
-      "notes": [
-        "Pro"
-      ],
-      "imageFile": "swix_vp50.png",
-      "active": true
-    },
-    {
-      "id": "_vp55",
-      "brand": "",
+      "id": "swix_vp55",
+      "brand": "Swix",
       "line": "VP",
       "code": "VP55",
       "product": "Pro Violet",
@@ -343,8 +716,8 @@
       "active": true
     },
     {
-      "id": "_vp60",
-      "brand": "",
+      "id": "swix_vp60",
+      "brand": "Swix",
       "line": "VP",
       "code": "VP60",
       "product": "Pro Violet/Red",
@@ -369,34 +742,8 @@
       "active": true
     },
     {
-      "id": "_vp65",
-      "brand": "",
-      "line": "VP",
-      "code": "VP65",
-      "product": "Pro Black/Red",
-      "type": "hardwax",
-      "segment": "race",
-      "temp_ranges": {
-        "new": {
-          "min": 0,
-          "max": 2
-        },
-        "old": {
-          "min": -1,
-          "max": 3
-        },
-        "wet": null
-      },
-      "priority": 76,
-      "notes": [
-        "Pro"
-      ],
-      "imageFile": "swix_vp65.png",
-      "active": true
-    },
-    {
-      "id": "_vp70",
-      "brand": "",
+      "id": "swix_vp70",
+      "brand": "Swix",
       "line": "VP",
       "code": "VP70",
       "product": "Pro Yellow",
@@ -411,7 +758,10 @@
           "min": 0,
           "max": 4
         },
-        "wet": null
+        "wet": {
+          "min": -1,
+          "max": 3
+        }
       },
       "priority": 75,
       "notes": [
@@ -421,133 +771,804 @@
       "active": true
     },
     {
-      "id": "_gripviolet",
-      "brand": "",
-      "line": "XC",
-      "code": "GRIP VIOLET",
-      "product": "XC Kickwax Violet",
+      "id": "swix_v55",
+      "brand": "Swix",
+      "line": "V",
+      "code": "V55",
+      "product": "Red Special Wax",
       "type": "hardwax",
       "segment": "training",
       "temp_ranges": {
         "new": {
-          "min": -9,
-          "max": -1
+          "min": 0,
+          "max": 1
         },
         "old": {
-          "min": -12,
-          "max": -3
+          "min": -2,
+          "max": 1
         },
-        "wet": null
-      },
-      "priority": 70,
-      "notes": [
-        "All types"
-      ],
-      "imageFile": "skigo_xc_violet.png",
-      "active": true
-    },
-    {
-      "id": "_gripblue",
-      "brand": "",
-      "line": "XC",
-      "code": "GRIP BLUE",
-      "product": "XC Kickwax Blue",
-      "type": "hardwax",
-      "segment": "training",
-      "temp_ranges": {
-        "new": {
-          "min": -10,
-          "max": -3
-        },
-        "old": {
-          "min": -12,
-          "max": -5
-        },
-        "wet": null
-      },
-      "priority": 70,
-      "notes": [
-        "Cold conditions"
-      ],
-      "imageFile": "skigo_xc_blue.png",
-      "active": true
-    },
-    {
-      "id": "_ffrracingviolet",
-      "brand": "",
-      "line": "FFR",
-      "code": "FFR Racing Violet",
-      "product": "FFR Racing Grip Violet",
-      "type": "hardwax",
-      "segment": "race",
-      "temp_ranges": {
-        "new": {
-          "min": -12,
-          "max": -1
-        },
-        "old": {
-          "min": -15,
-          "max": -3
-        },
-        "wet": null
-      },
-      "priority": 78,
-      "notes": [
-        "Race oriented"
-      ],
-      "imageFile": "skigo_ffr_violet.png",
-      "active": true
-    },
-    {
-      "id": "_ffrracingblue",
-      "brand": "",
-      "line": "FFR",
-      "code": "FFR Racing Blue",
-      "product": "FFR Racing Grip Blue",
-      "type": "hardwax",
-      "segment": "race",
-      "temp_ranges": {
-        "new": {
-          "min": -10,
-          "max": -3
-        },
-        "old": {
-          "min": -15,
-          "max": -5
-        },
-        "wet": null
-      },
-      "priority": 78,
-      "notes": [
-        "Race oriented"
-      ],
-      "imageFile": "skigo_ffr_blue.png",
-      "active": true
-    },
-    {
-      "id": "_ffrracingyellow",
-      "brand": "",
-      "line": "FFR",
-      "code": "FFR Racing Yellow",
-      "product": "FFR Racing Grip Yellow",
-      "type": "hardwax",
-      "segment": "race",
-      "temp_ranges": {
-        "new": {
+        "wet": {
           "min": -1,
-          "max": 5
+          "max": 0
+        }
+      },
+      "priority": 70,
+      "notes": [
+        "Near zero"
+      ],
+      "imageFile": "swix-v55.webp",
+      "active": true
+    },
+    {
+      "id": "swix_v60",
+      "brand": "Swix",
+      "line": "V",
+      "code": "V60",
+      "product": "Red/Silver Wax",
+      "type": "hardwax",
+      "segment": "training",
+      "temp_ranges": {
+        "new": {
+          "min": 0,
+          "max": 3
         },
+        "old": {
+          "min": -1,
+          "max": 2
+        },
+        "wet": {
+          "min": -1,
+          "max": 1
+        }
+      },
+      "priority": 68,
+      "notes": [
+        "Warm snow"
+      ],
+      "imageFile": "swix-v60.webp",
+      "active": true
+    },
+    {
+      "id": "swix_v45",
+      "brand": "Swix",
+      "line": "V",
+      "code": "V45",
+      "product": "Violet Special Wax",
+      "type": "hardwax",
+      "segment": "training",
+      "temp_ranges": {
+        "new": {
+          "min": -3,
+          "max": 0
+        },
+        "old": {
+          "min": -6,
+          "max": -2
+        },
+        "wet": null
+      },
+      "priority": 73,
+      "notes": [
+        "Slightly warmer"
+      ],
+      "imageFile": "swix-v45.webp",
+      "active": true
+    },
+    {
+      "id": "swix_v50",
+      "brand": "Swix",
+      "line": "V",
+      "code": "V50",
+      "product": "Violet Wax",
+      "type": "hardwax",
+      "segment": "training",
+      "temp_ranges": {
+        "new": {
+          "min": 0,
+          "max": 0
+        },
+        "old": {
+          "min": -1,
+          "max": 0
+        },
+        "wet": null
+      },
+      "priority": 70,
+      "notes": [
+        "Zero condition"
+      ],
+      "imageFile": "swix-v50.webp",
+      "active": true
+    },
+    {
+      "id": "swix_kn33",
+      "brand": "Swix",
+      "line": "KN",
+      "code": "KN33",
+      "product": "KN33 Nero Klister",
+      "type": "klister",
+      "segment": "race",
+      "temp_ranges": {
+        "new": null,
+        "old": {
+          "min": -7,
+          "max": 1
+        },
+        "wet": {
+          "min": -3,
+          "max": 1
+        }
+      },
+      "priority": 90,
+      "notes": [
+        "Nero-klister med mindre isningsrisk, brett spann runt noll, tävlingsinriktat"
+      ],
+      "imageFile": "ynivoj18cno3gdzdtytx.webp",
+      "active": true
+    },
+    {
+      "id": "swix_kn44",
+      "brand": "Swix",
+      "line": "KN",
+      "code": "KN44",
+      "product": "KN44 Nero Klister",
+      "type": "klister",
+      "segment": "race",
+      "temp_ranges": {
+        "new": null,
         "old": {
           "min": -3,
           "max": 3
         },
+        "wet": {
+          "min": -1,
+          "max": 5
+        }
+      },
+      "priority": 90,
+      "notes": [
+        "Nero-klister för grovkornig/blöt snö kring 0 till några plusgrader, tävlingsvalla"
+      ],
+      "imageFile": "bgpd4c68vs4mbimqjvms.webp",
+      "active": true
+    },
+    {
+      "id": "swix_kx20",
+      "brand": "Swix",
+      "line": "KX",
+      "code": "KX20",
+      "product": "KX20 Green Base Klister",
+      "type": "klister",
+      "segment": "race",
+      "temp_ranges": {
+        "new": null,
+        "old": {
+          "min": -20,
+          "max": 5
+        },
+        "wet": {
+          "min": -20,
+          "max": 5
+        }
+      },
+      "priority": 70,
+      "notes": [
+        "Green base klister, slitstarkt underlag för kallt/varmt, används som grundklister"
+      ],
+      "imageFile": "usazjzof84dkiwskuy8t.webp",
+      "active": true
+    },
+    {
+      "id": "swix_kx30",
+      "brand": "Swix",
+      "line": "KX",
+      "code": "KX30",
+      "product": "KX30 Blue Ice Klister",
+      "type": "klister",
+      "segment": "race",
+      "temp_ranges": {
+        "new": null,
+        "old": {
+          "min": -12,
+          "max": 0
+        },
+        "wet": {
+          "min": -6,
+          "max": 0
+        }
+      },
+      "priority": 82,
+      "notes": [
+        "Ice klister för grovkornig snö/skarsnö/is. Kan även användas som underlags-/mellanklister"
+      ],
+      "imageFile": "m6fcfthgizy8lbh8umjn.webp",
+      "active": true
+    },
+    {
+      "id": "swix_kx40s",
+      "brand": "Swix",
+      "line": "KX",
+      "code": "KX40S",
+      "product": "KX40S Silver Klister",
+      "type": "klister",
+      "segment": "race",
+      "temp_ranges": {
+        "new": null,
+        "old": {
+          "min": -4,
+          "max": 2
+        },
+        "wet": {
+          "min": -2,
+          "max": 2
+        }
+      },
+      "priority": 84,
+      "notes": [
+        "Silverklister för finkornig transformerad snö kring noll, går långt in i torr snö utan isning"
+      ],
+      "imageFile": "tt9ts2bfck3hf5qisjyp.webp",
+      "active": true
+    },
+    {
+      "id": "swix_kx45n",
+      "brand": "Swix",
+      "line": "KX",
+      "code": "KX45N",
+      "product": "KX45N Violet Special Klister",
+      "type": "klister",
+      "segment": "race",
+      "temp_ranges": {
+        "new": null,
+        "old": {
+          "min": -4,
+          "max": 1
+        },
+        "wet": {
+          "min": -2,
+          "max": 4
+        }
+      },
+      "priority": 85,
+      "notes": [
+        "Allround-klister för grovkornig/fuktig snö, växlande runt 0 °C"
+      ],
+      "imageFile": "oorwzd3mjzmbevzqgcvk.webp",
+      "active": true
+    },
+    {
+      "id": "swix_kx55",
+      "brand": "Swix",
+      "line": "KX",
+      "code": "KX55",
+      "product": "KX55 Violet Extra",
+      "type": "klister",
+      "segment": "race",
+      "temp_ranges": {
+        "new": null,
+        "old": {
+          "min": -6,
+          "max": 4
+        },
+        "wet": {
+          "min": -2,
+          "max": 4
+        }
+      },
+      "priority": 82,
+      "notes": [
+        "Most old transformed snow"
+      ],
+      "imageFile": "frfnucqmbxqd51bp97gq.webp",
+      "active": true
+    },
+    {
+      "id": "swix_kx65",
+      "brand": "Swix",
+      "line": "KX",
+      "code": "KX65",
+      "product": "KX65 Red Klister",
+      "type": "klister",
+      "segment": "race",
+      "temp_ranges": {
+        "new": null,
+        "old": {
+          "min": 0,
+          "max": 3
+        },
+        "wet": {
+          "min": 1,
+          "max": 5
+        }
+      },
+      "priority": 86,
+      "notes": [
+        "Rött klister för grovkornig, fuktig och blöt snö, +grader"
+      ],
+      "imageFile": "kamw7ukcjn7cxvdcmeoo.webp",
+      "active": true
+    },
+    {
+      "id": "swix_kx75",
+      "brand": "Swix",
+      "line": "KX",
+      "code": "KX75",
+      "product": "KX75 Red Extra Wet Klister",
+      "type": "klister",
+      "segment": "race",
+      "temp_ranges": {
+        "new": null,
+        "old": {
+          "min": 1,
+          "max": 5
+        },
+        "wet": {
+          "min": 2,
+          "max": 15
+        }
+      },
+      "priority": 87,
+      "notes": [
+        "Extra våtklister för slask, hög vattenhalt, sent vårföre"
+      ],
+      "imageFile": "xhicugdstrg6ca2fp45p.webp",
+      "active": true
+    },
+    {
+      "id": "swix_k21s",
+      "brand": "Swix",
+      "line": "K",
+      "code": "K21S",
+      "product": "K21S Uni Silver",
+      "type": "klister",
+      "segment": "race",
+      "temp_ranges": {
+        "new": null,
+        "old": {
+          "min": -5,
+          "max": 3
+        },
+        "wet": {
+          "min": -2,
+          "max": 3
+        }
+      },
+      "priority": 80,
+      "notes": [
+        "Transformed snow from fine to coarse snow"
+      ],
+      "imageFile": "lqg4szvh85o8nhvn7yw4.webp",
+      "active": true
+    },
+    {
+      "id": "swix_k22",
+      "brand": "Swix",
+      "line": "K",
+      "code": "K22",
+      "product": "K22 Uni VM",
+      "type": "klister",
+      "segment": "race",
+      "temp_ranges": {
+        "new": null,
+        "old": {
+          "min": -3,
+          "max": 10
+        },
+        "wet": {
+          "min": -3,
+          "max": 10
+        }
+      },
+      "priority": 88,
+      "notes": [
+        "Universal silver klister for recrational and racing skiers"
+      ],
+      "imageFile": "grhcdoo007yyw19gohgc.webp",
+      "active": true
+    },
+    {
+      "id": "swix_kx35n",
+      "brand": "Swix",
+      "line": "KX",
+      "code": "KX35N",
+      "product": "KX35N Blue extra",
+      "type": "klister",
+      "segment": "race",
+      "temp_ranges": {
+        "new": null,
+        "old": {
+          "min": -8,
+          "max": 0
+        },
+        "wet": {
+          "min": -4,
+          "max": 0
+        }
+      },
+      "priority": 82,
+      "notes": [
+        "Most old transformed snow"
+      ],
+      "imageFile": "rgf0p0qwvjx6o6cz4rua.webp",
+      "active": true
+    },
+    {
+      "id": "rode_rode",
+      "brand": "Rode",
+      "line": "R",
+      "code": "Rode",
+      "product": "Green",
+      "type": "hardwax",
+      "segment": "race",
+      "temp_ranges": {
+        "new": {
+          "min": -15,
+          "max": -7
+        },
+        "old": {
+          "min": -13,
+          "max": -5
+        },
         "wet": null
       },
-      "priority": 76,
+      "priority": 82,
       "notes": [
-        "Warm/wet bias"
+        "Very cold, dry, sharp crystals; classic cold-snow Rode wax"
       ],
-      "imageFile": "skigo_ffr_yellow.png",
+      "imageFile": "250003-p20_2.jpg",
+      "active": true
+    },
+    {
+      "id": "rode_rode",
+      "brand": "Rode",
+      "line": "R",
+      "code": "Rode",
+      "product": "Green Special",
+      "type": "hardwax",
+      "segment": "race",
+      "temp_ranges": {
+        "new": {
+          "min": -30,
+          "max": -10
+        },
+        "old": {
+          "min": -28,
+          "max": -8
+        },
+        "wet": null
+      },
+      "priority": 82,
+      "notes": [
+        "Extremely cold conditions; used when snow is very dry and abrasive"
+      ],
+      "imageFile": "250003-p15_1.jpg",
+      "active": true
+    },
+    {
+      "id": "rode_rode",
+      "brand": "Rode",
+      "line": "R",
+      "code": "Rode",
+      "product": "Blue Multigrade",
+      "type": "hardwax",
+      "segment": "race",
+      "temp_ranges": {
+        "new": {
+          "min": -12,
+          "max": -5
+        },
+        "old": {
+          "min": -10,
+          "max": -3
+        },
+        "wet": null
+      },
+      "priority": 82,
+      "notes": [
+        "Wide-range blue; stable across varying cold new-snow conditions"
+      ],
+      "imageFile": "250003-p36_2.jpg",
+      "active": true
+    },
+    {
+      "id": "rode_rode",
+      "brand": "Rode",
+      "line": "R",
+      "code": "Rode",
+      "product": "Blue Super Extra",
+      "type": "hardwax",
+      "segment": "race",
+      "temp_ranges": {
+        "new": {
+          "min": -10,
+          "max": -3
+        },
+        "old": {
+          "min": -8,
+          "max": -1
+        },
+        "wet": null
+      },
+      "priority": 82,
+      "notes": [
+        "For fine new snow close to freezing but still cold; high grip"
+      ],
+      "imageFile": "250003-p38_1_1.jpg",
+      "active": true
+    },
+    {
+      "id": "rode_rode",
+      "brand": "Rode",
+      "line": "R",
+      "code": "Rode",
+      "product": "Blue Super",
+      "type": "hardwax",
+      "segment": "race",
+      "temp_ranges": {
+        "new": {
+          "min": -10,
+          "max": -3
+        },
+        "old": {
+          "min": -8,
+          "max": -1
+        },
+        "wet": null
+      },
+      "priority": 82,
+      "notes": [
+        "Rode’s iconic blue; very reliable in typical winter new snow"
+      ],
+      "imageFile": "250003-p32_1_1.jpg",
+      "active": true
+    },
+    {
+      "id": "rode_rode",
+      "brand": "Rode",
+      "line": "R",
+      "code": "Rode",
+      "product": "Blue Super Weiss",
+      "type": "hardwax",
+      "segment": "race",
+      "temp_ranges": {
+        "new": {
+          "min": -7,
+          "max": -3
+        },
+        "old": {
+          "min": -5,
+          "max": -1
+        },
+        "wet": null
+      },
+      "priority": 82,
+      "notes": [
+        "Slightly warmer than Blue Super; good for moist fine snow"
+      ],
+      "imageFile": "250003-p28_1.jpg",
+      "active": true
+    },
+    {
+      "id": "rode_rode",
+      "brand": "Rode",
+      "line": "R",
+      "code": "Rode",
+      "product": "Blue I",
+      "type": "hardwax",
+      "segment": "race",
+      "temp_ranges": {
+        "new": {
+          "min": -6,
+          "max": -2
+        },
+        "old": {
+          "min": -4,
+          "max": 0
+        },
+        "wet": null
+      },
+      "priority": 82,
+      "notes": [
+        "For fine new snow approaching 0°C; good in humid cold conditions"
+      ],
+      "imageFile": "250003-p30_1.jpg",
+      "active": true
+    },
+    {
+      "id": "rode_rode",
+      "brand": "Rode",
+      "line": "R",
+      "code": "Rode",
+      "product": "Blue II",
+      "type": "hardwax",
+      "segment": "race",
+      "temp_ranges": {
+        "new": {
+          "min": -8,
+          "max": -2
+        },
+        "old": {
+          "min": -6,
+          "max": 0
+        },
+        "wet": null
+      },
+      "priority": 82,
+      "notes": [
+        "Slightly colder than Blue I; good all-round blue for fine snow"
+      ],
+      "imageFile": "250003-p34_1.jpg",
+      "active": true
+    },
+    {
+      "id": "rode_rode",
+      "brand": "Rode",
+      "line": "R",
+      "code": "Rode",
+      "product": "Violett Multigrade",
+      "type": "hardwax",
+      "segment": "race",
+      "temp_ranges": {
+        "new": {
+          "min": -5,
+          "max": -3
+        },
+        "old": {
+          "min": -3,
+          "max": -1
+        },
+        "wet": null
+      },
+      "priority": 82,
+      "notes": [
+        "For moist fine snow near freezing; good in variable conditions"
+      ],
+      "imageFile": "250003-p46_1_1.jpg",
+      "active": true
+    },
+    {
+      "id": "rode_rode",
+      "brand": "Rode",
+      "line": "R",
+      "code": "Rode",
+      "product": "Violett",
+      "type": "hardwax",
+      "segment": "race",
+      "temp_ranges": {
+        "new": {
+          "min": -4,
+          "max": -2
+        },
+        "old": {
+          "min": -2,
+          "max": 0
+        },
+        "wet": {
+          "min": -1,
+          "max": 0
+        }
+      },
+      "priority": 82,
+      "notes": [
+        "Standard violet for humid new snow; good when snow is glazing slightly"
+      ],
+      "imageFile": "250003-p40_1_1.jpg",
+      "active": true
+    },
+    {
+      "id": "rode_rode",
+      "brand": "Rode",
+      "line": "R",
+      "code": "Rode",
+      "product": "Violett Extra",
+      "type": "hardwax",
+      "segment": "race",
+      "temp_ranges": {
+        "new": {
+          "min": -3,
+          "max": 0
+        },
+        "old": {
+          "min": -1,
+          "max": 2
+        },
+        "wet": {
+          "min": -3,
+          "max": 0
+        }
+      },
+      "priority": 82,
+      "notes": [
+        "For new snow at or just below freezing; excellent in moist, fine crystals"
+      ],
+      "imageFile": "250003-p42_1.jpg",
+      "active": true
+    },
+    {
+      "id": "rode_rode",
+      "brand": "Rode",
+      "line": "R",
+      "code": "Rode",
+      "product": "Gul (Yellow)",
+      "type": "hardwax",
+      "segment": "race",
+      "temp_ranges": {
+        "new": {
+          "min": 1,
+          "max": 4
+        },
+        "old": {
+          "min": 3,
+          "max": 6
+        },
+        "wet": {
+          "min": 1,
+          "max": 4
+        }
+      },
+      "priority": 82,
+      "notes": [
+        "Warm, wet new snow; high moisture content; often paired with klister base"
+      ],
+      "imageFile": "250003-p60_1_1.jpg",
+      "active": true
+    },
+    {
+      "id": "rode_rode",
+      "brand": "Rode",
+      "line": "R",
+      "code": "Rode",
+      "product": "Rossa (Red)",
+      "type": "hardwax",
+      "segment": "race",
+      "temp_ranges": {
+        "new": {
+          "min": 0,
+          "max": 2
+        },
+        "old": {
+          "min": 2,
+          "max": 4
+        },
+        "wet": {
+          "min": 0,
+          "max": 2
+        }
+      },
+      "priority": 82,
+      "notes": [
+        "Warm, slightly wet new snow; good when tracks soften"
+      ],
+      "imageFile": "250003-p50_1.jpg",
+      "active": true
+    },
+    {
+      "id": "rode_rode",
+      "brand": "Rode",
+      "line": "R",
+      "code": "Rode",
+      "product": "Rot Extra",
+      "type": "hardwax",
+      "segment": "race",
+      "temp_ranges": {
+        "new": {
+          "min": 0,
+          "max": 2
+        },
+        "old": {
+          "min": 2,
+          "max": 4
+        },
+        "wet": {
+          "min": 0,
+          "max": 2
+        }
+      },
+      "priority": 82,
+      "notes": [
+        "Extra grip in warm, wet fine snow; often used in tricky near‑zero conditions"
+      ],
+      "imageFile": "250003-p52_1.jpg",
       "active": true
     }
   ]
